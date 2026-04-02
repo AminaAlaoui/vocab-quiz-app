@@ -1,0 +1,270 @@
+.flashcards-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.flashcards-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.flashcards-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 80px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* Progress */
+.progress-container {
+  margin-bottom: 32px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--surface);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 3px;
+}
+
+/* Flashcard */
+.flashcard-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.flashcard-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 320px;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  gap: 12px;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--surface), var(--surface2));
+  border-color: var(--primary);
+}
+
+.card-category {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.card-word {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.card-word.spanish {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-hint {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.card-original {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.card-flip-hint {
+  position: absolute;
+  bottom: 16px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* Actions */
+.flashcard-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.flashcard-actions .btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+}
+
+/* Done Screen */
+.done-screen {
+  text-align: center;
+  padding: 60px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.done-emoji {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.done-screen h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.done-screen p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.done-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.done-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.done-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.done-stat span:last-child {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.no-words {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 60px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .card-word {
+    font-size: 2rem;
+  }
+
+  .flashcard {
+    height: 280px;
+  }
+
+  .flashcard-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}

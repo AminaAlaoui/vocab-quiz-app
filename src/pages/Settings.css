@@ -1,0 +1,158 @@
+.settings-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.settings-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.settings-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.settings-content {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.setting-info label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.setting-info p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.setting-control {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* Toggle */
+.toggle-btn {
+  width: 52px;
+  height: 28px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  padding: 0;
+}
+
+.toggle-btn.on {
+  background: var(--primary);
+}
+
+.toggle-btn.off {
+  background: var(--border);
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  transition: left 0.3s ease;
+}
+
+.toggle-btn.on .toggle-circle {
+  left: 27px;
+}
+
+.toggle-btn.off .toggle-circle {
+  left: 3px;
+}
+
+/* About */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.about-item:last-child {
+  border-bottom: none;
+}
+
+.about-item span:first-child {
+  color: var(--text-muted);
+}
+
+.about-item span:last-child {
+  font-weight: 600;
+}
+
+/* Save Button */
+.save-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+  font-size: 1.1rem;
+}
