@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# VocabQuiz — English & Spanish Vocabulary Learning App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive vocabulary learning web app built with **React**, **TypeScript**, and **Framer Motion**.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-8-purple?style=flat-square&logo=vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 **Flashcards** — Interactive cards with flip animation to learn English/Spanish vocabulary
+- 🎯 **Quiz Mode** — Multiple choice quizzes with score tracking and instant feedback
+- 📊 **Dashboard** — Track your progress, accuracy, streaks, and performance by category
+- ⚙️ **Settings** — Customize quiz length, translation direction, and more
+- 💾 **Persistent Stats** — Your progress is saved locally using localStorage
+- 📱 **Responsive Design** — Works on desktop and mobile
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** + **TypeScript**
+- **Vite** — Fast build tool
+- **React Router v6** — Client-side routing
+- **Framer Motion** — Smooth animations
+- **CSS Variables** — Custom dark theme
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v18+
+- npm
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/AminaAlaoui/vocab-quiz-app.git
+
+# Navigate to project
+cd vocab-quiz-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+
+
+## 📁 Project Structure
 ```
+src/
+├── components/     # Reusable components (Navbar)
+├── pages/          # App pages (Home, Flashcards, Quiz, Dashboard, Settings)
+├── hooks/          # Custom hooks (useStats)
+├── data/           # Vocabulary data
+├── types/          # TypeScript interfaces
+└── index.css       # Global styles
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📸 Pages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Page | Description |
+|------|-------------|
+| 🏠 Home | Landing page with features overview |
+| 📚 Flashcards | Learn words with flip cards |
+| 🎯 Quiz | Test your knowledge |
+| 📊 Dashboard | View your stats and progress |
+| ⚙️ Settings | Customize your experience |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
