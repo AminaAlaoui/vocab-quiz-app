@@ -50,17 +50,6 @@ npm run dev
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 
-
-## 📁 Project Structure
-```
-src/
-├── components/     # Reusable components (Navbar)
-├── pages/          # App pages (Home, Flashcards, Quiz, Dashboard, Settings)
-├── hooks/          # Custom hooks (useStats)
-├── data/           # Vocabulary data
-├── types/          # TypeScript interfaces
-└── index.css       # Global styles
-
 ## 📸 Pages
 
 | Page | Description |
